@@ -7,6 +7,7 @@ public class Person {
   private double height;
   private int age;
 
+  // 建構子
   public Person(String name, int birthYear) {
     this.name = name;
     this.birthYear = birthYear;
@@ -49,6 +50,7 @@ public class Person {
     return age;
   }
 
+  // 獲取BMI的方法
   double getBMI() {
     double w = getWeight();
     double h = getHeight();
@@ -61,6 +63,7 @@ public class Person {
     }
   }
 
+  // 設定特定條件拋出特定例外的文字
   void testPersonData() throws PersonException {
     if (birthYear > 2023 ) {
       throw new PersonException("Birth year must less than 2023");
